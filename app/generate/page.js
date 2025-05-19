@@ -5,8 +5,9 @@ import { useState } from 'react';
 
 const Generate = () => {
 
-    const [link, setlink] = useState("")
-    const [linktext, setlinktext] = useState("")
+    // const [link, setlink] = useState("")
+    // const [linktext, setlinktext] = useState("")
+    const [links, setLinks] = useState([{link:"",linktext:""}])
     const [handle, sethandle] = useState("")
     const [pic, setpic] = useState("")
 
@@ -49,7 +50,7 @@ const Generate = () => {
                         </div>
                     </div>
                     <div className="item">
-                        <h2 className='font-semibold text-2xl text-gray-700'>Step 2 : Add Links</h2>
+                        <h2 className='font-semibold text-2xl text-gray-700'>Step 2 :+ Add Links</h2>
                         <div className='mx-4'>
                             <input value={link || ""} onChange={e=>{setlink(e.target.value)}} className='px-4 py-2 mx-2 my-2 rounded-full focus:outline-purple-400 bg-white' type="text" placeholder='Enter link text' />
                             <input value={linktext || ""} onChange={e=>{setlinktext(e.target.value)}} className='px-4 py-2 mx-2 my-2 rounded-full focus:outline-purple-400 bg-white' type="text" placeholder='Enter link' />
