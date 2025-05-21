@@ -11,9 +11,14 @@ const Generate = () => {
     // const [link, setlink] = useState("")
     // const [linktext, setlinktext] = useState("")
     const [links, setLinks] = useState([{ linktext: "", link: "" }])
-    const [handle, sethandle] = useState(searchParams.get("handle"))
+    const [handle, sethandle] = useState("")
     const [pic, setpic] = useState("")
     const [desc, setdesc] = useState("")
+
+    useEffect(() => {
+    const h = searchParams.get('handle');
+    sethandle(h || '');
+  }, [searchParams]);
 
     const handleChange = (index, link, linktext) => {
         setLinks((initialLinks) => {
