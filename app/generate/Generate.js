@@ -51,7 +51,7 @@ const Generate = () => {
             redirect: "follow"
         };
 
-        const r = await fetch("https://linktree-two-dusky.vercel.app/api/add", requestOptions)
+        const r = await fetch("/api/add", requestOptions)
         const result = await r.json()
         if(result.success){
             toast.success(result.message)
