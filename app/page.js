@@ -10,7 +10,7 @@ export default function Home() {
   const url = process.env.NEXT_PUBLIC_HOST
 
    const createTree = () => { 
-    router.push(`${url}/generate?handle=${text}`)
+    router.push(`/generate?handle=${text}`)
   }
 
 
